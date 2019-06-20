@@ -22,3 +22,15 @@ console.log(doctorBill[patient])
 // Lightning Exercise 3: Use Object.values() to output all the property values to the console in Chrome.
 const doctorBillList = Object.values(doctorBill)
 console.log(doctorBillList)
+
+// Lightning Exercises
+// Lightning Exercise 1: Output all of the key names from your doctor's office bill to the console in Chrome.
+const doctorKeyNames = Object.keys(doctorBill)
+console.log(doctorKeyNames)
+// Lightning Exercise 2: Output all of the key names from your doctor's office bill to the DOM inside a parent <section> element. Wrap each one in a <span> element.
+
+const doctorContainer = document.querySelector("#container")
+
+for(const key of doctorKeyNames){
+    doctorContainer.innerHTML += `<p>${key}</p>`
+}
